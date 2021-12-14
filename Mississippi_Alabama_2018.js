@@ -1,3 +1,9 @@
+//var points = SE_TF.merge(SE_Sea).merge(SE_BarLand).merge(SE_VegLand).merge(SE_UrbLand);
+//var state1 = ee.FeatureCollection('TIGER/2016/States')
+//    .filter(ee.Filter(
+//        ee.Filter.eq('NAME', 'Louisiana')));
+//var aoi1 = coast_area.intersection(state1, ee.ErrorMargin(1));
+        
 var state2 = ee.FeatureCollection('TIGER/2016/States')
     .filter(ee.Filter(
         ee.Filter.eq('NAME', 'Mississippi')));
