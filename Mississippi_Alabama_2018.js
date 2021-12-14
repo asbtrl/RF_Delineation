@@ -231,7 +231,7 @@ function generateLandsatCollection(){
 }
 var collection = generateLandsatCollection();
 
-//add test==========
+//Add test
 var non_mosaic = collection.filterBounds(spatialJoined_points);
 
 //Will be used for frequency calculaton
@@ -242,7 +242,7 @@ var mosaic_free = non_mosaic.map(maskClouds).median();
 var visParams = {bands: ['red','green','blue'],min: [0,0,0],max: [2000, 2000, 2000]};
 //Map.addLayer(non_mosaic, visParams, 'Merged Landsat Collection'); 
 
-//test end========
+//Reducers
 
 var reducer = ee.Reducer.min()
     .combine(ee.Reducer.max(), '', true)
