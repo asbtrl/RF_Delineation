@@ -197,10 +197,6 @@ var maskClouds = function(image) {
   };
 
 // 2. Data Imports & Processing
-// vectors
-//var globCoast = ee.FeatureCollection('ft:1Hsoe_WwULJ23Nuj1wikGzfH_WQMtpDWOR3XpWkHk');
-//var randomPointsPreComputed = ee.FeatureCollection('ft:1hVC5uIlWZQxtsapNsr5AzcLm1Vzo4I_DqjfNgNmN'); // Precomputed Training
-//0~14 tidal flat, 15~24 land, 25~34 water
 
 // images
 function generateLandsatCollection(){
@@ -352,16 +348,6 @@ var testingPartition = withRandom.filter(ee.Filter.gte('random', globOptions.tra
 
 //print('Training Set:',trainingPartition);
 //print('Validation Set:',testingPartition);
-
-// 4. Training Data
-//var predictorSet = randomPointsPreComputed;
-//var predictorSubSet = predictorSet
-//  .filter(ee.Filter.neq('ndwi_stdDev', null)) 
-//  .randomColumn('random', 0);
-//var trainingSet = predictorSubSet
-//  .filter(ee.Filter.gte('random',globOptions.trainingValidationRatio));
-//var validationSet = predictorSubSet
-//.filter(ee.Filter.lt('random',globOptions.trainingValidationRatio));
 
 // 5. Classify 
 var classifier = ee.Classifier.smileRandomForest({
