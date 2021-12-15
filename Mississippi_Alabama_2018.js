@@ -60,12 +60,6 @@ var aoi=region;
 
 // 1. Functions
 var landsatFunctions = {
-   //maskClouds: function(image) {
-  //var cs = cloud_shadows(image);
-  //var c = clouds(image);
-  //image = image.updateMask(cs);
-  //return image.updateMask(c);
-  //},
 
   applyNDWI: function(image) {
     // apply NDWI to an image
